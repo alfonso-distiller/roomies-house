@@ -26,4 +26,9 @@ public class HouseServiceBean implements HouseService {
 		return houseRepository.findById(id);
 	}
 
+	@Override
+	public House save(House house) {
+		return houseRepository.save(house);
+	}
+	
 }

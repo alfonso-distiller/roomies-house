@@ -23,9 +23,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper	;
 import com.roomies.house.Application;
 import com.roomies.house.model.Address;
 import com.roomies.house.model.House;
@@ -153,11 +152,6 @@ public class HouseControllerTest {
 		newHouse.setAddress(a);
 		
 		return newHouse;
-	}
-	
-	private String mapToJson(Object obj) throws JsonProcessingException {
-		ObjectMapper objectMapper = new ObjectMapper();
-		return objectMapper.writeValueAsString(obj);
 	}
 	
 	private <T> T mapFromJson(String json, Class<T> clazz) 
